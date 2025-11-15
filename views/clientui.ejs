@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= product.product_name %> - Product Details</title>
+    <link rel="stylesheet" href="/css/clientui.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="product-card">
+        <div class="product-header">
+          <h2>Product Information</h2>
+          <img
+            src="product_jpeg/<%= product.product_type %>.jpeg"
+            alt="<%= product.product_name %>"
+            class="product-image"
+          />
+        </div>
+
+        <table class="product-info">
+          <tbody>
+            <tr>
+              <th>Product Name</th>
+              <td><%= product.product_name %></td>
+            </tr>
+            <tr>
+              <th>Batch Code</th>
+              <td><%= product.batch %></td>
+            </tr>
+            <tr>
+              <th>GTIN</th>
+              <td><%= product.gtin %></td>
+            </tr>
+            <tr>
+              <th>Brand Name</th>
+              <td>Cropshree Lifesciences Pvt. Ltd.</td>
+            </tr>
+            <tr>
+              <th>Marketed by</th>
+              <td>Cropshree Lifesciences Pvt. Ltd.</td>
+            </tr>
+            <tr>
+              <th>Manufactured</th>
+              <td><%= product.mfg_date %></td>
+            </tr>
+            <tr>
+              <th>Expires</th>
+              <td><%= product.exp_date %></td>
+            </tr>
+            <tr>
+              <th>Leaflet</th>
+              <td>
+                <a
+                  href="/product_pdf/<%= product.product_type %>.pdf"
+                  class="leaflet-link"
+                  download
+                >
+                  Download Product Leaflet
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="agro-footer">
+      <p>© 2025 Cropshree Lifesciences Pvt. Ltd. All rights reserved.</p>
+      <p>Made with ❤️ by BiTek Lab | Arghadip</p>
+    </div>
+  </body>
+</html>

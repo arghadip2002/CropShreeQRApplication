@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/headeradmin') %>
+    <!-- <link rel="stylesheet" href="/css/admin.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-sync-alt"></i>
+        Update Product Files
+      </div>
+      <div class="navbar-buttons">
+        <a href="/dashboard">
+          <i class="fas fa-tachometer-alt"></i>
+          Dashboard
+        </a>
+
+        <a href="/display">
+          <i class="fas fa-database"></i>
+          All Files
+        </a>
+
+        <a href="/logoutSure" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </a>
+      </div>
+    </nav>
+
+    <!-- Product Registration Form -->
+    <div class="form-container">
+      <h2>Update Files</h2>
+      <form
+        action="/update_display"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <!-- <div class="form-group">
+          <label for="gtin">GTIN*</label>
+          <input type="text" id="gtin" name="gtin" required />
+        </div>
+
+        <div class="form-group">
+          <label for="batchNumber">Product Name*</label>
+          <input type="text" id="batchNumber" name="product_name" required />
+        </div> -->
+
+        <div class="form-group">
+          <label for="product_type">Product Type*</label>
+          <input type="text" id="product_type" name="product_type" required />
+        </div>
+
+        <div class="form-group">
+          <label for="leaflet">Leaflet (PDF)</label>
+          <input
+            type="file"
+            id="leaflet"
+            name="leaflet"
+            accept=".pdf"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image (jpeg)</label>
+          <input type="file" id="image" name="image" accept=".jpeg" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
