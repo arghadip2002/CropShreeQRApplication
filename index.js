@@ -11,7 +11,6 @@ import { fileURLToPath } from "url";
 import ExcelJS from 'exceljs';
 import multer from "multer";
 import env from "dotenv";
-import bcrypt from 'bcrypt';
 
 
 const app = express();
